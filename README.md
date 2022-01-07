@@ -4,7 +4,7 @@
  * @Autor: Hawk
  * @Date: 2021-06-17 15:09:27
  * @LastEditors: Hawk
- * @LastEditTime: 2022-01-07 11:38:54
+ * @LastEditTime: 2022-01-07 11:43:09
 -->
 # vue3-typescript-cesium-elementPlus [后台插件化]
 
@@ -17,10 +17,11 @@ http://map.217dan.com/aeSAZtOfuN.php
 用户名:test  
 密码:12345678  
 
-前端使用的技术栈为：[项目地址为:https://gitee.com/hawk86104/vue3-ts-cesium-map-show]  
+前端使用的技术栈为：
 vue3.0 CLI4.x脚手架搭建，使用typescript作为逻辑代码，UI界面为elementPlus  
 GIS地图部分，使用Cesium-1.82开源库，简单了修改了地图展示部分代码  
 加入了主流的一些WebGL动态效果类  
+项目地址为: https://gitee.com/hawk86104/vue3-ts-cesium-map-show  
 
 此部分为后台源码：
 技术栈为：ThinkPHP5 + Bootstrap + mysql
@@ -45,7 +46,6 @@ https://www.fastadmin.net/video.html
 注意public运行目录 以及 thinkphp的伪静态配置  
 
 二、下载右侧编译好的 发行版 文件 .zip  
-
 1、修改上传文件的大小限制:  
 修改文件：  
 /application/extra/upload.php  
