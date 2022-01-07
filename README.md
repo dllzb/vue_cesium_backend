@@ -4,7 +4,7 @@
  * @Autor: Hawk
  * @Date: 2021-06-17 15:09:27
  * @LastEditors: Hawk
- * @LastEditTime: 2022-01-07 11:43:09
+ * @LastEditTime: 2022-01-07 11:46:29
 -->
 # vue3-typescript-cesium-elementPlus [后台插件化]
 
@@ -39,7 +39,7 @@ GIS地图部分，使用Cesium-1.82开源库，简单了修改了地图展示部
 ![展示](https://jdvop.oss-cn-qingdao.aliyuncs.com/assets/img/3ddemo/titleset.gif)
 
 使用方法：  
-一、首先安装fastadmin 「1.2.1.20210730_full」完整版  
+一、首先安装fastadmin 「1.2.1.20210730_full」完整版:https://www.fastadmin.net/download/full.html?version=1.2.1.20210730_beta
 其他最新的版本，因为版权原因，不给离线安装插件了。  
 然后安装fastadmin这个平台:  
 https://www.fastadmin.net/video.html  
@@ -52,8 +52,7 @@ https://www.fastadmin.net/video.html
 20行：  
 'maxsize'   => '20mb',  
 
-2、application/config.php 中 
-
+2、application/config.php 中  
 unknownsources  改为 true  
 debug  改为 true  
 trace  改为 true  
