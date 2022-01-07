@@ -1,0 +1,104 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Showswitch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <input  id="c-showswitch" name="row[showswitch]" type="hidden" value="{$row.showswitch}">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-showswitch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success {eq name="$row.showswitch" value="0"}fa-flip-horizontal text-gray{/eq} fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('模型地址')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-url" data-rule="required" class="form-control" name="row[url]" type="text" value="{$row.url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Color')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-color" readonly data-rule="required" class="form-control" name="row[color]" type="text" value="{$row.color|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Colormodelist')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-colorModelist" data-rule="required" class="form-control selectpicker" name="row[colorModelist]">
+                {foreach name="colormodelistList" item="vo"}
+                    <option value="{$key}" {in name="key" value="$row.colorModelist"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Duration')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-duration" data-rule="required" class="form-control" name="row[duration]" type="number" value="{$row.duration|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Rotatespeed')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-rotateSpeed" data-rule="required" class="form-control" name="row[rotateSpeed]" type="number" value="{$row.rotateSpeed|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Latrotation')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-latRotation" data-rule="required" class="form-control" step="0.001" name="row[latRotation]" type="number" value="{$row.latRotation|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Positionlon')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-positionLon" data-rule="required" class="form-control" step="0.0000001" name="row[positionLon]" type="number" value="{$row.positionLon|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Positionlat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-positionLat" data-rule="required" class="form-control" step="0.0000001" name="row[positionLat]" type="number" value="{$row.positionLat|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Height')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-height" data-rule="required" class="form-control" name="row[height]" type="number" value="{$row.height|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Scale')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-scale" data-rule="required" class="form-control" name="row[scale]" type="number" value="{$row.scale|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Minimumpixelsize')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-minimumPixelSize" data-rule="required" class="form-control" name="row[minimumPixelSize]" type="number" value="{$row.minimumPixelSize|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">可视化设置预览:</label>
+        <div class="col-xs-6 col-sm-4">
+            <button type="button" id="Vdata_bt" class="col-sm-3 btn btn-info btn-embossed">编辑</button>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

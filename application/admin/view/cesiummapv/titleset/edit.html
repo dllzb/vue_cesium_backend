@@ -1,0 +1,108 @@
+<form id="edit-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('名称')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="{$row.name|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Url')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-url" data-rule="required" class="form-control" name="row[url]" type="text" value="{$row.url|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Offset_x')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-offset_x" data-rule="required" class="form-control" name="row[offset_x]" type="number" value="{$row.offset_x|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Offset_y')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-offset_y" data-rule="required" class="form-control" name="row[offset_y]" type="number" value="{$row.offset_y|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Offset_z')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-offset_z" data-rule="required" class="form-control" name="row[offset_z]" type="number" value="{$row.offset_z|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Onswitch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <input  id="c-onswitch" name="row[onswitch]" type="hidden" value="{$row.onswitch}">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-onswitch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success {eq name="$row.onswitch" value="0"}fa-flip-horizontal text-gray{/eq} fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Flytoswitch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <input  id="c-flytoswitch" name="row[flytoswitch]" type="hidden" value="{$row.flytoswitch}">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-flytoswitch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success {eq name="$row.flytoswitch" value="0"}fa-flip-horizontal text-gray{/eq} fa-2x"></i>
+            </a>
+            <div class="co-title-tips">
+                注意和地图初始化视角冲突
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Color')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-color" style="width: 4em;" class="form-control fullcolor" name="row[color]" type="text" value="{$row.color|htmlentities}">
+            <div class="co-title-tips">
+                注意此颜色会被打光效果的颜色覆盖，但透明度保留
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Effectswitch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <input  id="c-effectswitch" name="row[effectswitch]" type="hidden" value="{$row.effectswitch}">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-effectswitch" data-yes="1" data-no="0" >
+                <i id="c-effectswitch-ai" class="fa fa-toggle-on text-success {eq name="$row.effectswitch" value="0"}fa-flip-horizontal text-gray{/eq} fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Height')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-height" data-rule="required" class="form-control" name="row[height]" type="number" value="{$row.height|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Effect_color')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-effect_color" style="width: 4em;" data-rule="required" class="form-control" name="row[effect_color]" type="color" value="{$row.effect_color|htmlentities}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">可视化设置预览:</label>
+        <div class="col-xs-6 col-sm-4">
+            <button type="button" id="Vdata_bt" data-id="{$row.id}" class="col-sm-3 btn btn-info btn-embossed">编辑</button>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
+<style>
+    .co-title-tips{
+        float: right;
+        color: #8e8e8e;
+        line-height: 27px;
+        font-size: 12px;
+    }
+</style>
+

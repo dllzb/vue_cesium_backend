@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title><%= process.env.VUE_APP_NAME %></title>
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico" />
+    <!--jquery-->
+    <script
+      crossorigin="anonymous"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <!--cesium相关-->
+    <script src="https://mapv-data.oss-cn-hangzhou.aliyuncs.com/Cesium-1.82-hawk/Cesium.js"></script>
+    <!-- <script src="<%= BASE_URL %>Cesium-1.82-hawk/Cesium.js"></script> -->
+    <!-- <script src="<%= BASE_URL %>Cesium-src/1.82/Cesium.js"></script> -->
+    <link
+      rel="stylesheet"
+      href="https://mapv-data.oss-cn-hangzhou.aliyuncs.com/Cesium-1.82-hawk/Widgets/widgets.css"
+    />
+  </head>
+  <body>
+    <noscript>
+      <strong
+        >We're sorry but <%= process.env.VUE_APP_NAME %> doesn't work properly
+        without JavaScript enabled. Please enable it to continue.</strong
+      >
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <style>
+    html {
+      height: 100%;
+    }
+    body {
+      background-color: black;
+      font-family: PingFang SC Medium, Microsoft YaHei, Arial, sans-serif !important;
+      height: 100%;
+      margin: 0px;
+    }
+  </style>
+</html>

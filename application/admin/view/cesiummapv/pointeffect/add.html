@@ -1,0 +1,77 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Effect_type')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <select  id="c-effect_type" readonly data-rule="required" class="form-control selectpicker" multiple="" name="row[effect_type][]" data-max-options="1">
+                {foreach name="effectTypeList" item="vo"}
+                    <option value="{$key}" {in name="key" value="CircleDiffusion"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lon')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lon" data-rule="required" class="form-control" step="0.000001" name="row[lon]" type="number" value="121.51">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Lat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-lat" data-rule="required" class="form-control" step="0.000001" name="row[lat]" type="number" value="31.20">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Height')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-height" readonly data-rule="required" class="form-control" name="row[height]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Onswitch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input  id="c-onswitch" name="row[onswitch]" type="hidden" value="1">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-onswitch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success  fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Color')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-color" readonly data-rule="required" class="form-control" name="row[color]" type="text" value="rgba(19, 206, 102, 0.8)">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Radius')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-radius" readonly data-rule="required" class="form-control" name="row[radius]" type="number" value="1000">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Duration')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-duration" readonly data-rule="required" class="form-control" name="row[duration]" type="number" value="3000">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Ext')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-ext" readonly data-rule="required" class="form-control" name="row[ext]" type="text" value="{}">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">可视化设置预览:</label>
+        <div class="col-xs-6 col-sm-4">
+            <button type="button" id="Vdata_bt" class="col-sm-3 btn btn-info btn-embossed">编辑</button>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,104 @@
+<form id="add-form" class="form-horizontal" role="form" data-toggle="validator" method="POST" action="">
+
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Name')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-name" data-rule="required" class="form-control" name="row[name]" type="text" value="">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Showswitch')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            
+            <input  id="c-showswitch" name="row[showswitch]" type="hidden" value="1">
+            <a href="javascript:;" data-toggle="switcher" class="btn-switcher" data-input-id="c-showswitch" data-yes="1" data-no="0" >
+                <i class="fa fa-toggle-on text-success  fa-2x"></i>
+            </a>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('模型地址')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-url" data-rule="required" class="form-control" name="row[url]" type="text" value="https://a.amap.com/jsapi_demos/static/gltf-online/shanghai/scene.gltf">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Color')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-color" readonly data-rule="required" class="form-control" name="row[color]" type="text" value="rgba(255, 255, 255, 1)">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Colormodelist')}:</label>
+        <div class="col-xs-12 col-sm-8">
+                        
+            <select  id="c-colorModelist" data-rule="required" class="form-control selectpicker" name="row[colorModelist]">
+                {foreach name="colormodelistList" item="vo"}
+                    <option value="{$key}" {in name="key" value="HIGHLIGHT"}selected{/in}>{$vo}</option>
+                {/foreach}
+            </select>
+
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Duration')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-duration" data-rule="required" class="form-control" name="row[duration]" type="number" value="20">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Rotatespeed')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-rotateSpeed" data-rule="required" class="form-control" name="row[rotateSpeed]" type="number" value="0">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Latrotation')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-latRotation" data-rule="required" class="form-control" step="0.001" name="row[latRotation]" type="number" value="3.76">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Positionlon')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-positionLon" data-rule="required" class="form-control" step="0.0000001" name="row[positionLon]" type="number" value="121.51568329">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Positionlat')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-positionLat" data-rule="required" class="form-control" step="0.0000001" name="row[positionLat]" type="number" value="31.22982201">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Height')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-height" data-rule="required" class="form-control" name="row[height]" type="number" value="240">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Scale')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-scale" data-rule="required" class="form-control" name="row[scale]" type="number" value="641">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">{:__('Minimumpixelsize')}:</label>
+        <div class="col-xs-12 col-sm-8">
+            <input id="c-minimumPixelSize" data-rule="required" class="form-control" name="row[minimumPixelSize]" type="number" value="20">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-xs-12 col-sm-2">可视化设置预览:</label>
+        <div class="col-xs-6 col-sm-4">
+            <button type="button" id="Vdata_bt" class="col-sm-3 btn btn-info btn-embossed">编辑</button>
+        </div>
+    </div>
+    <div class="form-group layer-footer">
+        <label class="control-label col-xs-12 col-sm-2"></label>
+        <div class="col-xs-12 col-sm-8">
+            <button type="submit" class="btn btn-success btn-embossed disabled">{:__('OK')}</button>
+            <button type="reset" class="btn btn-default btn-embossed">{:__('Reset')}</button>
+        </div>
+    </div>
+</form>
